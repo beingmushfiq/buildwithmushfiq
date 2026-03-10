@@ -21,7 +21,7 @@ export const personalInfo = {
   tagline: "Building intelligent web systems that automate businesses, convert users, and scale digital operations. ⚡🤖",
   location: "Dhaka, Bangladesh",
   email: "beingmushfiq@gmail.com",
-  github: "https://www.github.com/beingmushfiq",
+  github: "https://github.com/beingmushfiq",
   portfolio: "https://thisismushfiq.blogspot.com",
   bio: "I am an AI-powered full-stack developer focused on building intelligent digital systems that automate businesses and improve online performance. I specialize in combining modern web technologies with AI to create scalable platforms, automation tools, and high-conversion websites."
 };

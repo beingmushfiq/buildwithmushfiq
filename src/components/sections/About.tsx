@@ -14,7 +14,8 @@ export default function About() {
     
     // Fetch real github data
     const getGithubData = async () => {
-      const username = personalInfo.github.split('/').pop() || 'beingmushfiq';
+      const githubUrl = personalInfo.github.replace(/\/$/, ""); // Remove trailing slash
+      const username = githubUrl.split('/').pop() || 'beingmushfiq';
       const data = await fetchLatestCommit(username);
       if (data) setLatestCommit(data);
     };
