@@ -1,5 +1,30 @@
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'motion/react';
+
+// Layout & UI Components
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import CustomCursor from './components/ui/CustomCursor';
+import ScrollToTop from './components/ui/ScrollToTop';
+import ChatBot from './components/ui/ChatBot';
+import CommandCenter from './components/ui/CommandCenter';
+
+// Section Components
+import Hero from './components/sections/Hero';
+import About from './components/sections/About';
+import SystemArchitecture from './components/sections/SystemArchitecture';
+import Skills from './components/sections/Skills';
+import Projects from './components/sections/Projects';
+import Services from './components/sections/Services';
+import AutomationLab from './components/sections/AutomationLab';
+import AIProjectPlanner from './components/sections/AIProjectPlanner';
+import ROICalculator from './components/sections/ROICalculator';
+import Experience from './components/sections/Experience';
+import Testimonials from './components/sections/Testimonials';
+import Contact from './components/sections/Contact';
+
+// Pages
 import AllProjects from './pages/AllProjects';
 
 function Home() {
