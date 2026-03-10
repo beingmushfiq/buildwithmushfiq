@@ -37,7 +37,7 @@ The platform is designed to showcase not just code, but the complete lifecycle o
 ### Frontend
 
 - **Framework:** [React 19](https://react.dev/) (Concurrent Mode)
-- **Build Tool:** [Vite 6](https://vitejs.dev/)
+- **Build Tool:** [Vite 7](https://vitejs.dev/)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **3D Graphics:** [Three.js](https://threejs.org/) & [React Three Fiber](https://r3f.docs.pmnd.rs/)
