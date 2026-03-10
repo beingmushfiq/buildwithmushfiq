@@ -98,6 +98,33 @@ export const projects = [
     github: "https://github.com/beingmushfiq/quantum-ops"
   },
   {
+    id: 19,
+    title: "Data Hub: ETL Automation",
+    description: "Simplified ETL platform for data engineers to build automated pipelines with integrated data quality cleaning via AI.",
+    features: ["Visual Pipeline Designer", "AI-Driven Data Cleaning", "Schema Mapping AI", "Multi-Source Connectors"],
+    tech: ["Python", "Airflow", "Snowflake", "React"],
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200&auto=format&fit=crop",
+    github: "https://github.com/beingmushfiq/data-hub"
+  },
+  {
+    id: 24,
+    title: "Fleet Sync: Logistics Manager",
+    description: "High-performance logistics management platform for large vehicle fleets with real-time GPS tracking and AI route optimization.",
+    features: ["Real-time GPS Tracking", "AI Route Optimization", "Fuel Consumption Analytics", "Preventative Maintenance Alerts"],
+    tech: ["Go", "Node.js", "PostgreSQL", "Mapbox API"],
+    image: "https://images.unsplash.com/photo-1586864387917-f538a53079b7?q=80&w=1200&auto=format&fit=crop",
+    github: "https://github.com/beingmushfiq/fleet-sync"
+  },
+  {
+    id: 14,
+    title: "Fin Track: AI Financial Advisor",
+    description: "Personal finance management tool that uses AI to predict future expenses and provide investment suggestions.",
+    features: ["Expense Prediction Engine", "Smart Budgeting Advice", "Investment Portfolio Tracker", "Secure Banking Integration"],
+    tech: ["Flutter", "Dart", "Firebase", "Python"],
+    image: "/src/assets/project_fin_track.png",
+    github: "https://github.com/beingmushfiq/fin-track"
+  },
+  {
     id: 3,
     title: "Neural Serve: API Gateway",
     description: "High-performance API gateway specifically designed for serving large language model requests with sub-millisecond latency.",
@@ -197,15 +224,6 @@ export const projects = [
     github: "https://github.com/beingmushfiq/edu-mind"
   },
   {
-    id: 14,
-    title: "Fin Track: AI Financial Advisor",
-    description: "Personal finance management tool that uses AI to predict future expenses and provide investment suggestions.",
-    features: ["Expense Prediction Engine", "Smart Budgeting Advice", "Investment Portfolio Tracker", "Secure Banking Integration"],
-    tech: ["Flutter", "Dart", "Firebase", "Python"],
-    image: "/src/assets/project_fin_track.png",
-    github: "https://github.com/beingmushfiq/fin-track"
-  },
-  {
     id: 15,
     title: "Logi Link: Supply Chain AI",
     description: "Enterprise supply chain optimization platform focusing on predictive logistics and automated inventory replenishment.",
@@ -242,15 +260,6 @@ export const projects = [
     github: "https://github.com/beingmushfiq/event-pro"
   },
   {
-    id: 19,
-    title: "Data Hub: ETL Automation",
-    description: "Simplified ETL platform for data engineers to build automated pipelines with integrated data quality cleaning via AI.",
-    features: ["Visual Pipeline Designer", "AI-Driven Data Cleaning", "Schema Mapping AI", "Multi-Source Connectors"],
-    tech: ["Python", "Airflow", "Snowflake", "React"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200&auto=format&fit=crop",
-    github: "https://github.com/beingmushfiq/data-hub"
-  },
-  {
     id: 20,
     title: "Artsy AI: Generative Art Studio",
     description: "Creative suite for artists to fine-tune generative models and create unique artworks with precise prompt engineering tools.",
@@ -285,15 +294,6 @@ export const projects = [
     tech: ["PHP", "Laravel", "React", "MySQL"],
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop",
     github: "https://github.com/beingmushfiq/retail-iq"
-  },
-  {
-    id: 24,
-    title: "Fleet Sync: Logistics Manager",
-    description: "High-performance logistics management platform for large vehicle fleets with real-time GPS tracking and AI route optimization.",
-    features: ["Real-time GPS Tracking", "AI Route Optimization", "Fuel Consumption Analytics", "Preventative Maintenance Alerts"],
-    tech: ["Go", "Node.js", "PostgreSQL", "Mapbox API"],
-    image: "https://images.unsplash.com/photo-1586864387917-f538a53079b7?q=80&w=1200&auto=format&fit=crop",
-    github: "https://github.com/beingmushfiq/fleet-sync"
   }
 ];
 
