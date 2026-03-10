@@ -19,8 +19,8 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'BuildWithMushfiq Backend is running' });
 });
 
-// For local development
-if (process.env.NODE_ENV !== 'production') {
+// Start server for local and non-serverless production (Render, Railway, etc.)
+if (!process.env.VERCEL) {
   app.listen(port, () => {
     console.log(`Backend server running on http://localhost:${port}`);
   });
