@@ -36,6 +36,7 @@
     "react-intersection-observer": "^10.0.3",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.1",
+    "serverless-http": "^4.0.0",
     "tailwind-merge": "^3.5.0",
     "three": "^0.183.2"
   },
