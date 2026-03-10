@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from
 import { useInView } from 'react-intersection-observer';
 import { projects } from '../../data/portfolio';
 import { ExternalLink, Github, ChevronRight, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 function ProjectCard({ project, idx, onClick }: { project: typeof projects[0], idx: number, onClick: () => void }) {
   const x = useMotionValue(0);
@@ -107,6 +108,8 @@ function ProjectCard({ project, idx, onClick }: { project: typeof projects[0], i
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const navigate = useNavigate();
+  const featuredProjects = projects.slice(0, 6);
 
   return (
     <section id="projects" className="py-24 perspective-1000">
@@ -133,6 +136,7 @@ export default function Projects() {
             </motion.p>
           </div>
           <motion.button
+            onClick={() => navigate('/projects')}
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -144,7 +148,7 @@ export default function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, idx) => (
+          {featuredProjects.map((project, idx) => (
             <ProjectCard 
               key={project.id} 
               project={project} 
