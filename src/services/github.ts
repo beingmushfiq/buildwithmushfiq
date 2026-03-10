@@ -1,5 +1,3 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-
 export interface LatestCommit {
   message: string;
   repo: string;
@@ -9,13 +7,34 @@ export interface LatestCommit {
 
 export const fetchLatestCommit = async (username: string): Promise<LatestCommit | null> => {
   try {
-    // Ensure we don't double up on /api if VITE_API_URL already includes it
-    const baseUrl = API_URL.endsWith('/api') ? API_URL : `${API_URL}/api`;
-    const response = await fetch(`${baseUrl}/github/latest-commit?username=${username}`);
+    // Direct GitHub API call from frontend
+    const response = await fetch(`https://api.github.com/repos/${username}/buildwithmushfiq/commits/main`);
+    
     if (!response.ok) {
-      throw new Error('Failed to fetch latest commit');
+      // Fallback to searching all repos if specific repo fails or user changed it
+      const searchResponse = await fetch(`https://api.github.com/users/${username}/events/public`);
+      if (!searchResponse.ok) throw new Error('Failed to fetch from GitHub');
+      
+      const events = await searchResponse.json();
+      const lastPush = events.find((e: any) => e.type === 'PushEvent');
+      
+      if (!lastPush) return null;
+
+      return {
+        message: lastPush.payload.commits[0]?.message || 'No message',
+        repo: lastPush.repo.name,
+        date: new Date(lastPush.created_at).toLocaleDateString(),
+        url: `https://github.com/${lastPush.repo.name}/commit/${lastPush.payload.head}`
+      };
     }
-    return await response.json();
+
+    const commitData = await response.json();
+    return {
+      message: commitData.commit.message,
+      repo: `${username}/buildwithmushfiq`,
+      date: new Date(commitData.commit.author.date).toLocaleDateString(),
+      url: commitData.html_url
+    };
   } catch (error) {
     console.error('Error fetching latest commit:', error);
     return null;

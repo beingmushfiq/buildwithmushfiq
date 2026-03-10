@@ -5,8 +5,6 @@
   <h3>Modern. Intelligent. Cinematic.</h3>
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbeingmushfiq%2Fbuildwithmushfiq)
-[![Deploy to Railway](https://railway.app/button.svg)](https://railway.app/template/deploy?referrerId=beingmushfiq&category=ai&plugins=none&template=https%3A%2F%2Fgithub.com%2Fbeingmushfiq%2Fbuildwithmushfiq)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/beingmushfiq/buildwithmushfiq)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/beingmushfiq/buildwithmushfiq)
 
 </div>
@@ -15,9 +13,9 @@
 
 ## 🚀 Overview
 
-**BuildWithMushfiq** is a high-fidelity, autonomous portfolio platform built for modern AI Systems Developers. It features a cinematic 3D interface, intelligent automation tools, and a secure backend integrated with Google Gemini AI.
+**BuildWithMushfiq** is a high-fidelity, autonomous portfolio platform built for modern AI Systems Developers. It features a cinematic 3D interface, intelligent automation tools, and integrated Google Gemini AI.
 
-The platform is designed to showcase not just code, but the complete lifecycle of intelligent systems—from visual architecture to ROI analysis and autonomous agent orchestration.
+This is a **frontend-only dynamic site**, optimized for one-click deployment to Vercel and Netlify. It performs all AI and GitHub logic directly in the browser.
 
 ### ✨ Key Features
 
@@ -34,21 +32,12 @@ The platform is designed to showcase not just code, but the complete lifecycle o
 
 ## 🛠️ Tech Stack
 
-### Frontend
-
-- **Framework:** [React 19](https://react.dev/) (Concurrent Mode)
+- **Framework:** [React 19](https://react.dev/)
 - **Build Tool:** [Vite 7](https://vitejs.dev/)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **3D Graphics:** [Three.js](https://threejs.org/) & [React Three Fiber](https://r3f.docs.pmnd.rs/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-
-### Backend (Serverless Ready)
-
-- **Runtime:** [Node.js](https://nodejs.org/)
-- **Framework:** [Express](https://expressjs.com/) (TypeScript)
-- **AI Integration:** [Google Gemini 1.5 Pro](https://ai.google.dev/)
-- **Deployment:** Vercel Serverless Functions via `/api` bridge.
+- **AI Integration:** [Google Gemini 1.5 Pro](https://ai.google.dev/) (Client-side)
 
 ---
 
@@ -66,8 +55,7 @@ cd buildwithmushfiq
 Create a `.env` file in the root directory:
 
 ```env
-GEMINI_API_KEY=your_gemini_api_key_here
-VITE_API_URL=/api # Use relative path for production, http://localhost:3001 for local
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 ### 3. Install Dependencies
@@ -84,33 +72,34 @@ npm run dev
 
 ---
 
-## 🌍 Deployment (Vercel)
+## 🌍 Deployment
 
-This project is optimized for Vercel.
+### Vercel
 
-1.  **Framework Preset:** Select "Vite".
-2.  **Environment Variables:**
-    - `GEMINI_API_KEY`: Your Google AI Studio key.
-    - `NODE_ENV`: `production`
-    - `VITE_API_URL`: `/api` (Crucial for serverless routing).
-3.  **Rewrites:** Handled automatically by `vercel.json` to bridge the Express backend with Vercel's serverless infrastructure.
+1. Select "Vite" as the framework preset.
+2. Add `VITE_GEMINI_API_KEY` to your environment variables.
+3. Deploy!
+
+### Netlify
+
+1. Build command: `npm run build`
+2. Publish directory: `dist`
+3. Add `VITE_GEMINI_API_KEY` to your environment variables.
+4. Deploy!
 
 ---
 
 ## 📁 Project Structure
 
 ```bash
-├── api/                    # Vercel Serverless entry point
-├── public/                 # Static assets (Favicons, manifest, high-res project images)
-├── server/                 # Express backend (TypeScript)
-│   ├── controllers/        # AI & Contact logic
-│   └── index.ts            # Secure API entry point
+├── public/                 # Static assets (Favicons, logos, project images)
 ├── src/                    # Frontend React application
 │   ├── components/         # Section & UI components
 │   ├── data/               # Portfolio content (projects, skills)
-│   ├── services/           # Backend API connectors
+│   ├── services/           # Client-side API connectors (Gemini, GitHub)
 │   └── App.tsx             # Application routing & layout
-├── vercel.json             # SPA routing & serverless config
+├── vercel.json             # Vercel SPA routing
+├── netlify.toml            # Netlify SPA routing
 └── vite.config.ts          # Build optimization config
 ```
 
