@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle, X, Send, Loader2, User, Bot } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
+import { chatWithAssistant } from '../../services/gemini';
 import Markdown from 'react-markdown';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 interface Message {
   role: 'user' | 'model';
@@ -37,51 +36,12 @@ export default function ChatBot() {
     setIsLoading(true);
 
     try {
-      const chat = ai.chats.create({
-        model: "gemini-3.1-pro-preview",
-        config: {
-          systemInstruction: `You are "Portfolio Assistant", a specialized AI representative for Mushfiqur Rahman's portfolio website. 
-
-Mushfiqur's Profile:
-- Role: AI-Powered Web Systems Developer.
-- Focus: Building intelligent web systems that automate businesses, convert users, and scale digital operations.
-- Location: Dhaka, Bangladesh.
-- Bio: He is an AI-powered full-stack developer focused on building intelligent digital systems that automate businesses and improve online performance. He specializes in combining modern web technologies with AI to create scalable platforms, automation tools, and high-conversion websites.
-
-Your Knowledge Base:
-1. Skills:
-   - Core Development: Full Stack Web Development, Frontend Architecture, Backend System Design, REST API Development, Database Design & Optimization.
-   - Frontend: HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, React / Modern JS Frameworks, Responsive Design.
-   - Backend: Node.js, Express.js, PHP / Laravel, API Integration, Authentication Systems.
-   - AI & Automation: AI-Powered Web Apps, AI Workflow Automation, AI Chatbot Integration, OpenAI / LLM Integration, Business Process Automation.
-
-2. Services Offered:
-   - AI-Powered Website Development, Business Automation Systems, Full Stack Web Applications, AI Chatbots & Assistants, Custom ERP / CRM Systems, E-commerce Platforms.
-
-3. Key Projects:
-   - AI Business Automation Dashboard (React, Node.js, PostgreSQL).
-   - Smart E-commerce Optimization (Next.js, Node.js, MongoDB).
-   - Autonomous Portfolio System (Three.js, React, Tailwind CSS).
-   - POS + ERP Management System (Laravel, MySQL).
-   - AI Content Automation Engine (Node.js, Python APIs).
-   - Micro-Experience Marketplace (React, Node.js, Stripe).
-
-Guidelines for Interaction:
-- Tone: Professional, innovative, helpful, and concise.
-- Goal: Answer questions about Mushfiqur's expertise, work, and how he can help businesses.
-- Handling Unknowns: If a user asks something outside of this knowledge base or specific details not listed, gracefully state that you don't have that information and encourage them to contact Mushfiqur directly via the contact form on the website or email him at beingmushfiq@gmail.com.
-- Formatting: Use Markdown for clarity.
-- Language: Respond in the same language the user uses.`,
-        },
-      });
-
-      // We need to send the whole history or just the last message? 
-      // For simplicity in this demo, we'll just send the current message.
-      // In a real app, we'd pass the history.
-      const response = await chat.sendMessage({ message: userMessage });
-      const botText = response.text || "I'm sorry, I couldn't process that request.";
+      const botText = await chatWithAssistant(userMessage, messages.map(m => ({
+        role: m.role,
+        content: m.text
+      })));
       
-      setMessages(prev => [...prev, { role: 'model', text: botText }]);
+      setMessages(prev => [...prev, { role: 'model', text: botText || "I'm sorry, I couldn't process that request." }]);
     } catch (error) {
       console.error("Chat Error:", error);
       setMessages(prev => [...prev, { role: 'model', text: "Sorry, I'm having trouble connecting right now. Please try again later." }]);

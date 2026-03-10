@@ -2,9 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, Command, X, Bot, Zap, ArrowRight, MessageSquare } from 'lucide-react';
 import { personalInfo, projects, skills } from '../../data/portfolio';
-import { GoogleGenAI } from "@google/genai";
+import { chatWithAssistant } from '../../services/gemini';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
 
 export default function CommandCenter() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,18 +44,16 @@ export default function CommandCenter() {
     setAiResponse(null);
 
     try {
-      const response = await ai.models.generateContent({
-        model: "gemini-3-flash-preview",
-        contents: `You are an AI assistant for BuildWithMushfiq's portfolio. 
+      const response = await chatWithAssistant(`
         Mushfiq's Info: ${JSON.stringify(personalInfo)}
         Projects: ${JSON.stringify(projects.map(p => ({ title: p.title, tech: p.tech })))}
         Skills: ${JSON.stringify(skills)}
         
         User Question: ${query}
         
-        Provide a concise, helpful answer (max 2 sentences). If the user asks for a project, mention it. If they ask for contact info, provide it.`,
-      });
-      setAiResponse(response.text);
+        Provide a concise, helpful answer (max 2 sentences). If the user asks for a project, mention it. If they ask for contact info, provide it.
+      `);
+      setAiResponse(response);
     } catch (error) {
       setAiResponse("I'm having trouble connecting to my brain right now. Try asking about Mushfiq's projects!");
     } finally {
