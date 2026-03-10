@@ -78,7 +78,6 @@ function ProjectCard({ project, idx, onClick }: { project: typeof projects[0], i
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
             <span className="text-foreground font-medium flex items-center gap-2">
@@ -189,7 +188,6 @@ export default function Projects() {
                     src={selectedProject.image}
                     alt={selectedProject.title}
                     className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="p-8 md:p-12">

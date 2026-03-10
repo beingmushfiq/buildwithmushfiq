@@ -103,7 +103,7 @@ export const projects = [
     description: "Simplified ETL platform for data engineers to build automated pipelines with integrated data quality cleaning via AI.",
     features: ["Visual Pipeline Designer", "AI-Driven Data Cleaning", "Schema Mapping AI", "Multi-Source Connectors"],
     tech: ["Python", "Airflow", "Snowflake", "React"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1551288049-bbbda540d3ad?q=80&w=1200&auto=format&fit=crop",
     github: "https://github.com/beingmushfiq/data-hub"
   },
   {
@@ -112,7 +112,7 @@ export const projects = [
     description: "High-performance logistics management platform for large vehicle fleets with real-time GPS tracking and AI route optimization.",
     features: ["Real-time GPS Tracking", "AI Route Optimization", "Fuel Consumption Analytics", "Preventative Maintenance Alerts"],
     tech: ["Go", "Node.js", "PostgreSQL", "Mapbox API"],
-    image: "https://images.unsplash.com/photo-1586864387917-f538a53079b7?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1580674285054-91845bb8c5a4?q=80&w=1200&auto=format&fit=crop",
     github: "https://github.com/beingmushfiq/fleet-sync"
   },
   {
