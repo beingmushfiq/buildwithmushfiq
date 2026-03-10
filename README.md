@@ -1,7 +1,7 @@
 # 🌌 BuildWithMushfiq | Autonomous AI Systems Developer Portfolio
 
 <div align="center">
-  <img src="./src/assets/logo.png" alt="BuildWithMushfiq Logo" width="120" height="120" />
+  <img src="/assets/logo.png" alt="BuildWithMushfiq Logo" width="120" height="120" />
   <h3>Modern. Intelligent. Cinematic.</h3>
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbeingmushfiq%2Fbuildwithmushfiq)
@@ -43,12 +43,12 @@ The platform is designed to showcase not just code, but the complete lifecycle o
 - **3D Graphics:** [Three.js](https://threejs.org/) & [React Three Fiber](https://r3f.docs.pmnd.rs/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 
-### Backend
+### Backend (Serverless Ready)
 
 - **Runtime:** [Node.js](https://nodejs.org/)
 - **Framework:** [Express](https://expressjs.com/) (TypeScript)
 - **AI Integration:** [Google Gemini 1.5 Pro](https://ai.google.dev/)
-- **Services:** Secure API Proxying, Contact Processing, and GitHub Webhooks.
+- **Deployment:** Vercel Serverless Functions via `/api` bridge.
 
 ---
 
@@ -67,8 +67,7 @@ Create a `.env` file in the root directory:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
-PORT=3001
-VITE_API_URL=http://localhost:3001
+VITE_API_URL=/api # Use relative path for production, http://localhost:3001 for local
 ```
 
 ### 3. Install Dependencies
@@ -79,38 +78,39 @@ npm install
 
 ### 4. Run Development Server
 
-This command runs both the React frontend and the Express backend concurrently.
-
 ```bash
 npm run dev
 ```
 
 ---
 
-## 📱 Responsiveness & Performance
+## 🌍 Deployment (Vercel)
 
-The platform is meticulously optimized for the following device profiles:
+This project is optimized for Vercel.
 
-- **Cinematic Desktop:** Full 3D particle effects and glassmorphism.
-- **Laptop/Tablet:** Adaptive bento-grid layouts and optimized shaders.
-- **Mobile:** Lightweight navigation, touch-optimized interactions, and 2D fallbacks for performance efficiency.
+1.  **Framework Preset:** Select "Vite".
+2.  **Environment Variables:**
+    - `GEMINI_API_KEY`: Your Google AI Studio key.
+    - `NODE_ENV`: `production`
+    - `VITE_API_URL`: `/api` (Crucial for serverless routing).
+3.  **Rewrites:** Handled automatically by `vercel.json` to bridge the Express backend with Vercel's serverless infrastructure.
 
 ---
 
 ## 📁 Project Structure
 
 ```bash
-├── public/                 # Static assets (Favicons, manifest)
+├── api/                    # Vercel Serverless entry point
+├── public/                 # Static assets (Favicons, manifest, high-res project images)
 ├── server/                 # Express backend (TypeScript)
 │   ├── controllers/        # AI & Contact logic
 │   └── index.ts            # Secure API entry point
 ├── src/                    # Frontend React application
-│   ├── assets/             # Images, local media & AI logos
 │   ├── components/         # Section & UI components
 │   ├── data/               # Portfolio content (projects, skills)
 │   ├── services/           # Backend API connectors
 │   └── App.tsx             # Application routing & layout
-├── index.html              # Entry template
+├── vercel.json             # SPA routing & serverless config
 └── vite.config.ts          # Build optimization config
 ```
 
