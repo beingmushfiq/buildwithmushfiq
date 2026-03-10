@@ -2,12 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { personalInfo } from '../../data/portfolio';
 import { Cpu, Code2, Zap, Globe, Github, MapPin, Clock, Terminal, Activity } from 'lucide-react';
+import { fetchLatestCommit, LatestCommit } from '../../services/github';
+import { formatDistanceToNow } from 'date-fns';
 
 export default function About() {
   const [time, setTime] = useState(new Date());
+  const [latestCommit, setLatestCommit] = useState<LatestCommit | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
+    
+    // Fetch real github data
+    const getGithubData = async () => {
+      const username = personalInfo.github.split('/').pop() || 'beingmushfiq';
+      const data = await fetchLatestCommit(username);
+      if (data) setLatestCommit(data);
+    };
+    getGithubData();
+
     return () => clearInterval(timer);
   }, []);
 
@@ -107,8 +119,25 @@ export default function About() {
             </div>
             <div>
               <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">Latest Commit</div>
-              <div className="text-sm font-medium truncate">feat: integrate gemini-3-flash</div>
-              <div className="text-[10px] text-muted-foreground mt-1">2 hours ago</div>
+              <a 
+                href={latestCommit?.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block hover:text-primary transition-colors"
+              >
+                <div className="text-sm font-medium truncate">
+                  {latestCommit ? latestCommit.message : 'Fetching latest commit...'}
+                </div>
+                <div className="text-[10px] text-muted-foreground mt-1 flex items-center gap-2">
+                  <span className="truncate max-w-[100px]">{latestCommit?.repo}</span>
+                  {latestCommit && (
+                    <>
+                      <span>•</span>
+                      <span>{formatDistanceToNow(new Date(latestCommit.date), { addSuffix: true })}</span>
+                    </>
+                  )}
+                </div>
+              </a>
             </div>
           </motion.div>
 
