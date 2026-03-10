@@ -2,12 +2,12 @@
 
 <div align="center">
   <img src="./src/assets/logo.png" alt="BuildWithMushfiq Logo" width="120" height="120" />
-  <h3>Modern. Intelligent. Futuristic.</h3>
+  <h3>Modern. Intelligent. Cinematic.</h3>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fuser%2Frepo)
-[![Deploy to Railway](https://railway.app/button.svg)](https://railway.app/template/deploy?referrerId=user&category=ai&plugins=none&template=https%3A%2F%2Fgithub.com%2Fuser%2Frepo)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/user/repo)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/user/repo)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbeingmushfiq%2Fbuildwithmushfiq)
+[![Deploy to Railway](https://railway.app/button.svg)](https://railway.app/template/deploy?referrerId=beingmushfiq&category=ai&plugins=none&template=https%3A%2F%2Fgithub.com%2Fbeingmushfiq%2Fbuildwithmushfiq)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/beingmushfiq/buildwithmushfiq)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/beingmushfiq/buildwithmushfiq)
 
 </div>
 
@@ -15,17 +15,20 @@
 
 ## 🚀 Overview
 
-**BuildWithMushfiq** is a high-fidelity, autonomous portfolio system designed for the next generation of AI Systems Developers. It combines cutting-edge frontend aesthetics with a secure backend integrated with Google Gemini AI to provide real-time business automation insights, interactive system architectures, and intelligent project roadmaps.
+**BuildWithMushfiq** is a high-fidelity, autonomous portfolio platform built for modern AI Systems Developers. It features a cinematic 3D interface, intelligent automation tools, and a secure backend integrated with Google Gemini AI.
+
+The platform is designed to showcase not just code, but the complete lifecycle of intelligent systems—from visual architecture to ROI analysis and autonomous agent orchestration.
 
 ### ✨ Key Features
 
-- **🤖 AI Command Center (Ctrl + K):** A global search and AI assistant that answers questions about Mushfiq's expertise and projects.
-- **🏗️ Interactive System Architecture:** Live, clickable diagrams showing how complex AI systems are built.
-- **📅 AI Project Planner:** Input a business idea and get an instant technical roadmap, tech stack, and timeline.
-- **💹 ROI & Automation Calculator:** Quantify the value of AI automation for your business.
-- **💬 Smart AI ChatBot:** Persistent floating assistant powered by dynamic RAG (Retrieval-Augmented Generation) logic.
-- **🌗 Liquid Theme Engine:** Seamless transition between Futuristic Dark and Sleek Light modes.
-- **⚡ Supercharged Tech Stack:** React 19, Vite 7, Tailwind 4, and Framer Motion for buttery-smooth interactions.
+- **🤖 AI Command Center (Ctrl + K):** Global neural search and contextual AI assistant.
+- **🏗️ Interactive Systems Architecture:** Real-time clickable diagrams showcasing complex data flows.
+- **📅 AI Project Planner:** Generate instant technical roadmaps and architectures from simple business ideas.
+- **💹 ROI & Automation Calculator:** Dynamic tool for quantifying the business value of AI efficiency.
+- **💬 Persistent AI Assistant:** Smart floating chatbot powered by Gemini Pro for real-time engagement.
+- **🎨 Cinematic UI:** Glassmorphism, 3D workstation scenes, and adaptive liquid theme engine.
+- **📊 Real-time GitHub Pulse:** Live commit tracking directly from the source repository.
+- **📂 Expanded Project Gallery:** Categorized grid of 20+ diverse AI and full-stack implementations.
 
 ---
 
@@ -33,19 +36,19 @@
 
 ### Frontend
 
-- **Framework:** [React 19](https://react.dev/)
-- **Build Tool:** [Vite 7](https://vitejs.dev/)
+- **Framework:** [React 19](https://react.dev/) (Concurrent Mode)
+- **Build Tool:** [Vite 6](https://vitejs.dev/)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
-- **3D Elements:** [Three.js](https://threejs.org/) / [R3F](https://r3f.docs.pmnd.rs/)
+- **3D Graphics:** [Three.js](https://threejs.org/) & [React Three Fiber](https://r3f.docs.pmnd.rs/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 
 ### Backend
 
 - **Runtime:** [Node.js](https://nodejs.org/)
-- **Framework:** [Express](https://expressjs.com/)
-- **AI Engine:** [Google Gemini API](https://ai.google.dev/)
-- **Security:** Secure API proxying for API keys and rate limiting.
+- **Framework:** [Express](https://expressjs.com/) (TypeScript)
+- **AI Integration:** [Google Gemini 1.5 Pro](https://ai.google.dev/)
+- **Services:** Secure API Proxying, Contact Processing, and GitHub Webhooks.
 
 ---
 
@@ -54,7 +57,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/buildwithmushfiq.git
+git clone https://github.com/beingmushfiq/buildwithmushfiq.git
 cd buildwithmushfiq
 ```
 
@@ -76,7 +79,7 @@ npm install
 
 ### 4. Run Development Server
 
-This will start both the React frontend (Port 3000) and the Express backend (Port 3001) concurrently.
+This command runs both the React frontend and the Express backend concurrently.
 
 ```bash
 npm run dev
@@ -84,42 +87,39 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
+## 📱 Responsiveness & Performance
 
-```bash
-├── public/                 # Static assets for production (favicon, etc.)
-├── server/                 # Express backend source code
-│   └── index.ts            # Secure API entry point
-├── src/                    # Frontend React application
-│   ├── assets/             # Images and local media
-│   ├── components/         # Reusable UI & Section components
-│   ├── context/            # Theme & Global State contexts
-│   ├── data/               # Portfolio information (personalInfo, projects, etc.)
-│   ├── lib/                # Utility functions
-│   └── services/           # API integration services
-├── index.html              # Main HTML entry
-├── tailwind.config.js      # CSS configuration
-└── vite.config.ts          # Build configuration
-```
+The platform is meticulously optimized for the following device profiles:
+
+- **Cinematic Desktop:** Full 3D particle effects and glassmorphism.
+- **Laptop/Tablet:** Adaptive bento-grid layouts and optimized shaders.
+- **Mobile:** Lightweight navigation, touch-optimized interactions, and 2D fallbacks for performance efficiency.
 
 ---
 
-## 📱 Responsiveness
+## 📁 Project Structure
 
-The platform is meticulously optimized for:
-
-- **Desktop:** Ultra-wide cinematic experience.
-- **Laptop/Tablet:** Fluid bento-grid layouts.
-- **Mobile:** Optimized 3D scenes and compact, readable navigation.
+```bash
+├── public/                 # Static assets (Favicons, manifest)
+├── server/                 # Express backend (TypeScript)
+│   ├── controllers/        # AI & Contact logic
+│   └── index.ts            # Secure API entry point
+├── src/                    # Frontend React application
+│   ├── assets/             # Images, local media & AI logos
+│   ├── components/         # Section & UI components
+│   ├── data/               # Portfolio content (projects, skills)
+│   ├── services/           # Backend API connectors
+│   └── App.tsx             # Application routing & layout
+├── index.html              # Entry template
+└── vite.config.ts          # Build optimization config
+```
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
+This project is licensed under the MIT License.
 
 <div align="center">
-  Built with ❤️ by <b>Mushfiqur Rahman</b>
+  Built with ❤️ by <b>BuildWithMushfiq</b>
 </div>
