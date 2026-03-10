@@ -202,7 +202,7 @@ export const projects = [
     description: "Personal finance management tool that uses AI to predict future expenses and provide investment suggestions.",
     features: ["Expense Prediction Engine", "Smart Budgeting Advice", "Investment Portfolio Tracker", "Secure Banking Integration"],
     tech: ["Flutter", "Dart", "Firebase", "Python"],
-    image: "https://images.unsplash.com/photo-1611974714024-462cd467af65?q=80&w=1200&auto=format&fit=crop",
+    image: "/src/assets/project_fin_track.png",
     github: "https://github.com/beingmushfiq/fin-track"
   },
   {
@@ -247,7 +247,7 @@ export const projects = [
     description: "Simplified ETL platform for data engineers to build automated pipelines with integrated data quality cleaning via AI.",
     features: ["Visual Pipeline Designer", "AI-Driven Data Cleaning", "Schema Mapping AI", "Multi-Source Connectors"],
     tech: ["Python", "Airflow", "Snowflake", "React"],
-    image: "https://images.unsplash.com/photo-1551288049-bbbda540d3ad?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1200&auto=format&fit=crop",
     github: "https://github.com/beingmushfiq/data-hub"
   },
   {
@@ -274,7 +274,7 @@ export const projects = [
     description: "Real-time stock and crypto sentiment tracking tool that analyzes social media signals to predict market volatility.",
     features: ["Social Sentiment Analysis", "Volatility Warning System", "Historical Correlation Engine", "Custom Watchlist AI"],
     tech: ["Python", "Pandas", "Elasticsearch", "React"],
-    image: "https://images.unsplash.com/photo-1611974714024-462cd467af65?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop",
     github: "https://github.com/beingmushfiq/market-mind"
   },
   {
@@ -292,7 +292,7 @@ export const projects = [
     description: "High-performance logistics management platform for large vehicle fleets with real-time GPS tracking and AI route optimization.",
     features: ["Real-time GPS Tracking", "AI Route Optimization", "Fuel Consumption Analytics", "Preventative Maintenance Alerts"],
     tech: ["Go", "Node.js", "PostgreSQL", "Mapbox API"],
-    image: "https://images.unsplash.com/photo-1580674285054-91845bb8c5a4?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1586864387917-f538a53079b7?q=80&w=1200&auto=format&fit=crop",
     github: "https://github.com/beingmushfiq/fleet-sync"
   }
 ];
