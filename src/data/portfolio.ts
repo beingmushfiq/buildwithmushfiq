@@ -98,22 +98,22 @@ export const projects = [
     github: "https://github.com/beingmushfiq/quantum-ops"
   },
   {
-    id: 19,
-    title: "Data Hub: ETL Automation",
-    description: "Simplified ETL platform for data engineers to build automated pipelines with integrated data quality cleaning via AI.",
-    features: ["Visual Pipeline Designer", "AI-Driven Data Cleaning", "Schema Mapping AI", "Multi-Source Connectors"],
-    tech: ["Python", "Airflow", "Snowflake", "React"],
-    image: "/src/assets/project_data_hub.png",
-    github: "https://github.com/beingmushfiq/data-hub"
+    id: 4,
+    title: "Sentinel AI: Threat Detection",
+    description: "Cybersecurity monitoring platform that uses anomalous behavior detection to stop zero-day exploits in real-time.",
+    features: ["Real-time Intrusion Detection", "Automated Threat Isolation", "Behavioral Biometrics", "Secure Logs with Blockchain"],
+    tech: ["Python", "TensorFlow", "Kafka", "React"],
+    image: "/src/assets/project_sentinel_ai_1773123013000_png_waitforprevioustools_true_1773123112174.png",
+    github: "https://github.com/beingmushfiq/sentinel-ai"
   },
   {
-    id: 24,
-    title: "Fleet Sync: Logistics Manager",
-    description: "High-performance logistics management platform for large vehicle fleets with real-time GPS tracking and AI route optimization.",
-    features: ["Real-time GPS Tracking", "AI Route Optimization", "Fuel Consumption Analytics", "Preventative Maintenance Alerts"],
-    tech: ["Go", "Node.js", "PostgreSQL", "Mapbox API"],
-    image: "/src/assets/project_fleet_sync.png",
-    github: "https://github.com/beingmushfiq/fleet-sync"
+    id: 5,
+    title: "Galaxy Search: Semantic Engine",
+    description: "A next-generation search engine that uses vector embeddings to provide deep semantic understanding of structured and unstructured data.",
+    features: ["Vector-based Search", "Natural Language Queries", "Autonomous Data Indexing", "Multi-lingual Support"],
+    tech: ["Pinecone", "LangChain", "Node.js", "Vite"],
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
+    github: "https://github.com/beingmushfiq/galaxy-search"
   },
   {
     id: 14,
@@ -134,22 +134,22 @@ export const projects = [
     github: "https://github.com/beingmushfiq/neural-serve"
   },
   {
-    id: 4,
-    title: "Sentinel AI: Threat Detection",
-    description: "Cybersecurity monitoring platform that uses anomalous behavior detection to stop zero-day exploits in real-time.",
-    features: ["Real-time Intrusion Detection", "Automated Threat Isolation", "Behavioral Biometrics", "Secure Logs with Blockchain"],
-    tech: ["Python", "TensorFlow", "Kafka", "React"],
-    image: "/src/assets/project_sentinel_ai_1773123013000_png_waitforprevioustools_true_1773123112174.png",
-    github: "https://github.com/beingmushfiq/sentinel-ai"
+    id: 19,
+    title: "Data Hub: ETL Automation",
+    description: "Simplified ETL platform for data engineers to build automated pipelines with integrated data quality cleaning via AI.",
+    features: ["Visual Pipeline Designer", "AI-Driven Data Cleaning", "Schema Mapping AI", "Multi-Source Connectors"],
+    tech: ["Python", "Airflow", "Snowflake", "React"],
+    image: "/src/assets/project_data_hub.png",
+    github: "https://github.com/beingmushfiq/data-hub"
   },
   {
-    id: 5,
-    title: "Galaxy Search: Semantic Engine",
-    description: "A next-generation search engine that uses vector embeddings to provide deep semantic understanding of structured and unstructured data.",
-    features: ["Vector-based Search", "Natural Language Queries", "Autonomous Data Indexing", "Multi-lingual Support"],
-    tech: ["Pinecone", "LangChain", "Node.js", "Vite"],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
-    github: "https://github.com/beingmushfiq/galaxy-search"
+    id: 24,
+    title: "Fleet Sync: Logistics Manager",
+    description: "High-performance logistics management platform for large vehicle fleets with real-time GPS tracking and AI route optimization.",
+    features: ["Real-time GPS Tracking", "AI Route Optimization", "Fuel Consumption Analytics", "Preventative Maintenance Alerts"],
+    tech: ["Go", "Node.js", "PostgreSQL", "Mapbox API"],
+    image: "/src/assets/project_fleet_sync.png",
+    github: "https://github.com/beingmushfiq/fleet-sync"
   },
   {
     id: 6,
