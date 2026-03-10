@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { personalInfo } from '../../data/portfolio';
-import logo from '../../assets/logo.png';
 
 export default function Footer() {
   return (
@@ -12,7 +11,7 @@ export default function Footer() {
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2 group cursor-pointer"
           >
-            <img src={logo} alt="Logo" className="w-8 h-8 rounded-lg group-hover:rotate-6 transition-transform shadow-lg shadow-primary/20 object-cover" />
+            <img src="/logo.png" alt="Logo" className="w-8 h-8 rounded-lg group-hover:rotate-6 transition-transform shadow-lg shadow-primary/20 object-cover" />
             <span className="text-xl font-bold tracking-tighter">BuildWithMushfiq</span>
           </motion.div>
           

@@ -1,7 +1,7 @@
 # 🌌 BuildWithMushfiq | Autonomous AI Systems Developer Portfolio
 
 <div align="center">
-  <img src="/assets/logo.png" alt="BuildWithMushfiq Logo" width="120" height="120" />
+  <img src="https://raw.githubusercontent.com/beingmushfiq/buildwithmushfiq/main/public/logo.png" alt="BuildWithMushfiq Logo" width="120" height="120" />
   <h3>Modern. Intelligent. Cinematic.</h3>
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbeingmushfiq%2Fbuildwithmushfiq)
