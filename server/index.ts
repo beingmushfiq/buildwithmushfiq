@@ -19,6 +19,11 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'BuildWithMushfiq Backend is running' });
 });
 
-app.listen(port, () => {
-  console.log(`Backend server running on http://localhost:${port}`);
-});
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`Backend server running on http://localhost:${port}`);
+  });
+}
+
+export default app;

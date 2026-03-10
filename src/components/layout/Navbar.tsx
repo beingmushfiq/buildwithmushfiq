@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Github, Mail, Globe, Sun, Moon } from 'lucide-react';
 import { personalInfo } from '../../data/portfolio';
+import logo from '../../assets/logo.png';
 import { cn } from '../../lib/utils';
 import { useTheme } from '../../context/ThemeContext';
 
@@ -43,7 +44,7 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold font-display tracking-tighter flex items-center gap-2 group"
         >
-          <img src="/src/assets/logo.png" alt="BuildWithMushfiq Logo" className="w-8 h-8 rounded-lg group-hover:rotate-6 transition-transform shadow-lg shadow-primary/20 object-cover" />
+          <img src={logo} alt="BuildWithMushfiq Logo" className="w-8 h-8 rounded-lg group-hover:rotate-6 transition-transform shadow-lg shadow-primary/20 object-cover" />
           <span className="hidden sm:inline">BuildWithMushfiq</span>
         </motion.a>
 

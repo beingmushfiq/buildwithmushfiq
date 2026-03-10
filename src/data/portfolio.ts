@@ -85,7 +85,7 @@ export const projects = [
     description: "A centralized command center for enterprise AI agents, managing multi-modal workflows and real-time data visualisations.",
     features: ["Multi-Agent Orchestration", "Real-time Neural Visualization", "Secure Data Guardrails", "Custom LLM Fine-tuning"],
     tech: ["React", "Node.js", "PostgreSQL", "Gemini 1.5 Pro"],
-    image: "/src/assets/project_ai_nexus_1773123010000_png_1773123048710.png",
+    image: "/assets/project_ai_nexus_1773123010000_png_1773123048710.png",
     github: "https://github.com/beingmushfiq/ai-nexus"
   },
   {
@@ -94,7 +94,7 @@ export const projects = [
     description: "Cloud-native infrastructure management platform with quantum-resistant encryption and automated scaling logic.",
     features: ["Auto-Scaling Architectures", "Quantum-Safe Encryption", "Multi-Cloud Monitoring", "Predictive Load Balancing"],
     tech: ["Next.js", "Go", "Docker", "Terraform"],
-    image: "/src/assets/project_quantum_ops_1773123011000_png_1773123064341.png",
+    image: "/assets/project_quantum_ops_1773123011000_png_1773123064341.png",
     github: "https://github.com/beingmushfiq/quantum-ops"
   },
   {
@@ -103,7 +103,7 @@ export const projects = [
     description: "Cybersecurity monitoring platform that uses anomalous behavior detection to stop zero-day exploits in real-time.",
     features: ["Real-time Intrusion Detection", "Automated Threat Isolation", "Behavioral Biometrics", "Secure Logs with Blockchain"],
     tech: ["Python", "TensorFlow", "Kafka", "React"],
-    image: "/src/assets/project_sentinel_ai_1773123013000_png_waitforprevioustools_true_1773123112174.png",
+    image: "/assets/project_sentinel_ai_1773123013000_png_waitforprevioustools_true_1773123112174.png",
     github: "https://github.com/beingmushfiq/sentinel-ai"
   },
   {
@@ -121,7 +121,7 @@ export const projects = [
     description: "Personal finance management tool that uses AI to predict future expenses and provide investment suggestions.",
     features: ["Expense Prediction Engine", "Smart Budgeting Advice", "Investment Portfolio Tracker", "Secure Banking Integration"],
     tech: ["Flutter", "Dart", "Firebase", "Python"],
-    image: "/src/assets/project_fin_track.png",
+    image: "/assets/project_fin_track.png",
     github: "https://github.com/beingmushfiq/fin-track"
   },
   {
@@ -130,7 +130,7 @@ export const projects = [
     description: "High-performance API gateway specifically designed for serving large language model requests with sub-millisecond latency.",
     features: ["LLM Request Caching", "Rate Limiting & Throttling", "Semantic Load Balancing", "Unified AI Provider Interface"],
     tech: ["Rust", "Redis", "gRPC", "WebAssembly"],
-    image: "/src/assets/project_neural_serve_1773123012000_png_1773123084890.png",
+    image: "/assets/project_neural_serve_1773123012000_png_1773123084890.png",
     github: "https://github.com/beingmushfiq/neural-serve"
   },
   {
@@ -139,7 +139,7 @@ export const projects = [
     description: "Simplified ETL platform for data engineers to build automated pipelines with integrated data quality cleaning via AI.",
     features: ["Visual Pipeline Designer", "AI-Driven Data Cleaning", "Schema Mapping AI", "Multi-Source Connectors"],
     tech: ["Python", "Airflow", "Snowflake", "React"],
-    image: "/src/assets/project_data_hub.png",
+    image: "/assets/project_data_hub.png",
     github: "https://github.com/beingmushfiq/data-hub"
   },
   {
@@ -148,7 +148,7 @@ export const projects = [
     description: "High-performance logistics management platform for large vehicle fleets with real-time GPS tracking and AI route optimization.",
     features: ["Real-time GPS Tracking", "AI Route Optimization", "Fuel Consumption Analytics", "Preventative Maintenance Alerts"],
     tech: ["Go", "Node.js", "PostgreSQL", "Mapbox API"],
-    image: "/src/assets/project_fleet_sync.png",
+    image: "/assets/project_fleet_sync.png",
     github: "https://github.com/beingmushfiq/fleet-sync"
   },
   {
